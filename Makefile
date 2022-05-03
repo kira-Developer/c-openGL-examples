@@ -19,7 +19,7 @@ bulid:
 	file='$(file)';
 	output='$(output)';
     ifeq ($(OS),Linux)
-		-g -Wall -Wextra -std=c99 -Iglfw/include/ -Iinc/gald/ -Iinc/stb/ -Iinc src/$(file) inc/glad.c inc/stb.c -o bin/$(output) glfw/src/libglfw3.a -lm -ldl -lpthread
+		gcc -g -Wall -Wextra -std=c99 -Iglfw/include/ -Iinc/gald/ -Iinc/stb/ -Iinc src/$(file) inc/glad.c inc/stb.c -o bin/$(output) glfw/src/libglfw3.a -lm -ldl -lpthread
 		
 
     endif
