@@ -30,8 +30,9 @@ or
 $ ./bulid.sh Camera.c Camera
 ```
 ## vs code
+
 ```console
-    shift + command + B
+shift + command + B
 ```
 
 ## References
