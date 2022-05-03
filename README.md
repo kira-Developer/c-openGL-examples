@@ -2,7 +2,8 @@
 openGL 2D and 3D examples with cglm l math ibrary 
 
 
-![alt text](https://thumbs.gfycat.com/DefenselessDampArawana-mobile.mp4"example")
+![Alt Text](https://thumbs.gfycat.com/DefenselessDampArawana-mobile.mp4)
+
 
 
 ## Quick Start
