@@ -1,0 +1,48 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: gcc build active file",
+			"command": "/usr/bin/gcc",
+			
+			"args": [
+				
+				"-g",
+				"-Wall", 
+				"-Iinc/",
+				"${file}",
+				"-Iinc/GLFW/",
+				"-Iinc/gald/",
+				"-Iinc/stb/",
+				"../inc/glad.c",
+				"../inc/stb.c",
+				"-o",
+				"../bin/${fileBasenameNoExtension}",
+				"../glfw/src/libglfw3.a",
+				"-framework",
+				"Cocoa",
+				"-framework",
+				"OpenGL",
+				"-framework",
+				"IOKit",
+				"&&",
+				"../bin/${fileBasenameNoExtension}"
+
+
+				
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: /usr/bin/gcc"
+		}
+	]
+}

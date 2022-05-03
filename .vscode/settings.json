@@ -1,0 +1,19 @@
+{
+    "files.associations": {
+        "complex": "c",
+        "stb_image.h": "c",
+        "call.h": "c",
+        "camera.h": "c",
+        "cmath": "c",
+        "cstdlib": "c",
+        "vec2.h": "c",
+        "cglm.h": "c",
+        "mat3.h": "c",
+        "algorithm": "c",
+        "vartex.h": "c",
+        "glad.h": "c",
+        "linmath.h": "c",
+        "stddef.h": "c",
+        "stdio.h": "c"
+    },
+}
