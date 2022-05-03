@@ -182,7 +182,7 @@ glVertexAttribPointer(layout, numComponents, type, GL_FALSE, stride, offset);
 glEnableVertexAttribArray(layout);
 VBOUbind();};
 
-void textureCreate(GLuint texture , int withimg , int heighimge ,int numcol , unsigned char * bytes){
+void textureCreate(GLuint texture , int withimg , int heighimg ,int numcol , unsigned char * bytes){
     
 
     glGenTextures(1,&texture); 
@@ -192,7 +192,7 @@ void textureCreate(GLuint texture , int withimg , int heighimge ,int numcol , un
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER , GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S , GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D,  GL_TEXTURE_WRAP_S , GL_REPEAT);
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, widthImg, heightImg, 0,  GL_RGB, GL_UNSIGNED_BYTE,bytes);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, withimg, heighimg, numcol,  GL_RGB, GL_UNSIGNED_BYTE,bytes);
     glGenerateMipmap(GL_TEXTURE_2D);
 };
 void textureBind(){ glBindTexture(GL_TEXTURE_2D, texture);};

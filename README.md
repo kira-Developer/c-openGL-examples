@@ -2,10 +2,15 @@
 openGL 2D and 3D examples with cglm l math ibrary 
 
 
-![myfile](https://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
+https://user-images.githubusercontent.com/60257920/166423299-71e2de87-e97e-48c6-b538-d685f49e8723.mp4
 
 
 
+## Differences
+
+- Written in C
+- Only tested on Linux and mac
+- Uses [cglm](https://www.glfw.org/) instead of GLM
 ## Quick Start
 
 Dependencies:
