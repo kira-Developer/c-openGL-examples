@@ -2,7 +2,7 @@
 openGL 2D and 3D examples with cglm l math ibrary 
 
 
-![myfile](https://github.com/kira-Developer/openGL-examples/blob/master/image/exm.mov)
+![myfile](https://www.reactiongifs.us/wp-content/uploads/2013/10/nuh_uh_conan_obrien.gif)
 
 
 
@@ -19,6 +19,11 @@ Dependencies:
 ```console
 $ make install
 $ make file=Camera.c output=Camera all
+```
+or 
+
+```console
+$ ./bulid.sh Camera.c Camera
 ```
 
 ## References
