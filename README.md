@@ -2,7 +2,7 @@
 openGL 2D and 3D examples with cglm l math ibrary 
 
 
-![myfile](https://github.com/kira-Developer/openGL-examples/blob/master/image/exm.gif)
+![myfile](https://github.com/kira-Developer/openGL-examples/blob/master/image/exm.mov)
 
 
 
