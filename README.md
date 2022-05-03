@@ -29,6 +29,10 @@ or
 ```console
 $ ./bulid.sh Camera.c Camera
 ```
+## vs code
+```console
+⇧ + ⌘ + B
+```
 
 ## References
 
