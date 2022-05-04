@@ -3,7 +3,7 @@ GCC = gcc
 CFLAG = -g -Wall -Wextra -std=c99 
 CFLAG += -Iglfw/include/ -Iinc/gald/ -Iinc/stb/ -Iinc
 CFLAG += src/$(file) inc/glad.c inc/stb.c -o bin/$(output)
-LDFLAGS = glfw/src/libglfw3.a
+LDFLAGS = glfw/src/libglfw3.a -lm
 
 ifeq ($(UNAME_S), Darwin)
 	LDFLAGS +=-framework OpenGL -framework IOKit -framework Cocoa
