@@ -1,12 +1,16 @@
-OS = Unix
-ifneq ($(shell uname -a | grep -i Darwin),)
-	OS = MacOS
+UNAME_S = $(shell uname -s)
+GCC = gcc 
+CFLAG = -g -Wall -Wextra -std=c99 
+CFLAG += -Iglfw/include/ -Iinc/gald/ -Iinc/stb/ -Iinc
+CFLAG += src/$(file) inc/glad.c inc/stb.c -o bin/$(output)
+LDFLAGS = glfw/src/libglfw3.a
+
+ifeq ($(UNAME_S), Darwin)
+	LDFLAGS +=-framework OpenGL -framework IOKit -framework Cocoa
 endif
-ifneq ($(shell uname -a | grep -i Windows),)
-	OS = Windows
-endif
-ifneq ($(shell uname -a | grep -i Linux),)
-	OS = Linux
+
+ifeq ($(UNAME_S), Linux)
+	LDFLAGS += -ldl -lpthread
 endif
 all: bulid run 
 
@@ -18,15 +22,10 @@ install:
 bulid: 
 	file='$(file)';
 	output='$(output)';
-    ifeq ($(OS),Linux)
-		gcc -g -Wall -Wextra -std=c99 -Iglfw/include/ -Iinc/gald/ -Iinc/stb/ -Iinc src/$(file) inc/glad.c inc/stb.c -o bin/$(output) glfw/src/libglfw3.a -lm -ldl -lpthread
-		
+    	
+	$(GCC) $(CFLAG) $(LDFLAGS)
 
-    endif
-    ifeq ($(OS),Darwin)
-	  	gcc -g -Wall -Wextra -std=c99 -Iglfw/include/ -Iinc/gald/ -Iinc/stb/ -Iinc src/$(file) inc/glad.c inc/stb.c -o bin/$(output) glfw/src/libglfw3.a -framework Cocoa -framework OpenGL -framework IOKit
 
-    endif
 
 run: 
 	./bin/$(output)
